@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ArchitectModel" representedClassName="ArchitectModel" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="venue" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="VenueModel" inverseName="architect" inverseEntity="VenueModel" syncable="YES"/>
+    </entity>
+    <entity name="PhotoModel" representedClassName="PhotoModel" syncable="YES">
+        <attribute name="attribution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="flickrID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="license" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="venue" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="VenueModel" inverseName="photos" inverseEntity="VenueModel" syncable="YES"/>
+    </entity>
+    <entity name="ResidentArtistModel" representedClassName="ResidentArtistModel" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VenueModel" inverseName="residentArtist" inverseEntity="VenueModel" syncable="YES"/>
+    </entity>
+    <entity name="StyleModel" representedClassName="StyleModel" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VenueModel" inverseName="style" inverseEntity="VenueModel" syncable="YES"/>
+    </entity>
+    <entity name="TourModel" representedClassName="TourModel" syncable="YES">
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="venue" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="VenueModel" inverseName="tour" inverseEntity="VenueModel" syncable="YES"/>
+    </entity>
+    <entity name="VenueModel" representedClassName="VenueModel" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facebook" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="famousPerformance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favorited" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="firstPerformance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="funFact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameFirstLetter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notableNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="opened" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="performancePerYear" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="seating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seats" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="visited" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="youtubeAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="architect" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ArchitectModel" inverseName="venue" inverseEntity="ArchitectModel" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoModel" inverseName="venue" inverseEntity="PhotoModel" syncable="YES"/>
+        <relationship name="residentArtist" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ResidentArtistModel" inverseName="venue" inverseEntity="ResidentArtistModel" syncable="YES"/>
+        <relationship name="style" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StyleModel" inverseName="venue" inverseEntity="StyleModel" syncable="YES"/>
+        <relationship name="tour" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TourModel" inverseName="venue" inverseEntity="TourModel" syncable="YES"/>
+        <relationship name="videos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="VideoModel" inverseName="venue" inverseEntity="VideoModel" syncable="YES"/>
+    </entity>
+    <entity name="VideoModel" representedClassName="VideoModel" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VenueModel" inverseName="videos" inverseEntity="VenueModel" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ArchitectModel" positionX="-459" positionY="-27" width="128" height="75"/>
+        <element name="PhotoModel" positionX="16" positionY="198" width="128" height="180"/>
+        <element name="ResidentArtistModel" positionX="-495" positionY="78" width="128" height="75"/>
+        <element name="StyleModel" positionX="-603" positionY="297" width="128" height="75"/>
+        <element name="TourModel" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="VenueModel" positionX="-236" positionY="-0" width="128" height="420"/>
+        <element name="VideoModel" positionX="-441" positionY="222" width="128" height="105"/>
+    </elements>
+</model>

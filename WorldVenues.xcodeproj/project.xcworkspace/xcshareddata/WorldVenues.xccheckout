@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>98A5F6CC-F5C2-44B9-A754-B9B8869256C4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WorldVenues</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BD6869933B957EF21753022FB8A66A4711FE372B</key>
+		<string>https://github.com/kuscinteractive/worldvenues.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WorldVenues.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BD6869933B957EF21753022FB8A66A4711FE372B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kuscinteractive/worldvenues.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BD6869933B957EF21753022FB8A66A4711FE372B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BD6869933B957EF21753022FB8A66A4711FE372B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>worldvenues</string>
+		</dict>
+	</array>
+</dict>
+</plist>

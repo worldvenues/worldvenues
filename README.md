@@ -1,4 +1,6 @@
-worldvenues
+WorldVenu.es
 ===========
 
-WorldVenues open source
+Description
+-
+WorldVenu.es for iOS
